@@ -1,0 +1,724 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F11B779C20740ACF00DC8089 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11B779B20740ACF00DC8089 /* AppDelegate.swift */; };
+		F11B779E20740ACF00DC8089 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11B779D20740ACF00DC8089 /* ViewController.swift */; };
+		F11B77A120740ACF00DC8089 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F11B779F20740ACF00DC8089 /* Main.storyboard */; };
+		F11B77A320740ACF00DC8089 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F11B77A220740ACF00DC8089 /* Assets.xcassets */; };
+		F11B77A620740ACF00DC8089 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F11B77A420740ACF00DC8089 /* LaunchScreen.storyboard */; };
+		F11B77B120740AD000DC8089 /* ElevateYourMorningTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11B77B020740AD000DC8089 /* ElevateYourMorningTests.swift */; };
+		F11B77B620740AD000DC8089 /* ElevateYourMorning WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F11B77B520740AD000DC8089 /* ElevateYourMorning WatchKit App.app */; };
+		F11B77BC20740AD000DC8089 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F11B77BA20740AD000DC8089 /* Interface.storyboard */; };
+		F11B77BE20740AD000DC8089 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F11B77BD20740AD000DC8089 /* Assets.xcassets */; };
+		F11B77C520740AD000DC8089 /* ElevateYourMorning WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F11B77C420740AD000DC8089 /* ElevateYourMorning WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F11B77CA20740AD000DC8089 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11B77C920740AD000DC8089 /* InterfaceController.swift */; };
+		F11B77CC20740AD000DC8089 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11B77CB20740AD000DC8089 /* ExtensionDelegate.swift */; };
+		F11B77CE20740AD000DC8089 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11B77CD20740AD000DC8089 /* NotificationController.swift */; };
+		F11B77D020740AD000DC8089 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F11B77CF20740AD000DC8089 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F11B77AD20740AD000DC8089 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F11B779020740ACF00DC8089 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F11B779720740ACF00DC8089;
+			remoteInfo = ElevateYourMorning;
+		};
+		F11B77B720740AD000DC8089 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F11B779020740ACF00DC8089 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F11B77B420740AD000DC8089;
+			remoteInfo = "ElevateYourMorning WatchKit App";
+		};
+		F11B77C620740AD000DC8089 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F11B779020740ACF00DC8089 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F11B77C320740AD000DC8089;
+			remoteInfo = "ElevateYourMorning WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F11B77D820740AD000DC8089 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F11B77C520740AD000DC8089 /* ElevateYourMorning WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F11B77DC20740AD000DC8089 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				F11B77B620740AD000DC8089 /* ElevateYourMorning WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F11B779820740ACF00DC8089 /* ElevateYourMorning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElevateYourMorning.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F11B779B20740ACF00DC8089 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F11B779D20740ACF00DC8089 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F11B77A020740ACF00DC8089 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F11B77A220740ACF00DC8089 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F11B77A520740ACF00DC8089 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F11B77A720740ACF00DC8089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F11B77AC20740AD000DC8089 /* ElevateYourMorningTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElevateYourMorningTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F11B77B020740AD000DC8089 /* ElevateYourMorningTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevateYourMorningTests.swift; sourceTree = "<group>"; };
+		F11B77B220740AD000DC8089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F11B77B520740AD000DC8089 /* ElevateYourMorning WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ElevateYourMorning WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F11B77BB20740AD000DC8089 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		F11B77BD20740AD000DC8089 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F11B77BF20740AD000DC8089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F11B77C420740AD000DC8089 /* ElevateYourMorning WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ElevateYourMorning WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F11B77C920740AD000DC8089 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		F11B77CB20740AD000DC8089 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		F11B77CD20740AD000DC8089 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		F11B77CF20740AD000DC8089 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F11B77D120740AD000DC8089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F11B77D220740AD000DC8089 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F11B779520740ACF00DC8089 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F11B77A920740ACF00DC8089 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F11B77C120740AD000DC8089 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F11B778F20740ACF00DC8089 = {
+			isa = PBXGroup;
+			children = (
+				F11B779A20740ACF00DC8089 /* ElevateYourMorning */,
+				F11B77AF20740AD000DC8089 /* ElevateYourMorningTests */,
+				F11B77B920740AD000DC8089 /* ElevateYourMorning WatchKit App */,
+				F11B77C820740AD000DC8089 /* ElevateYourMorning WatchKit Extension */,
+				F11B779920740ACF00DC8089 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F11B779920740ACF00DC8089 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F11B779820740ACF00DC8089 /* ElevateYourMorning.app */,
+				F11B77AC20740AD000DC8089 /* ElevateYourMorningTests.xctest */,
+				F11B77B520740AD000DC8089 /* ElevateYourMorning WatchKit App.app */,
+				F11B77C420740AD000DC8089 /* ElevateYourMorning WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F11B779A20740ACF00DC8089 /* ElevateYourMorning */ = {
+			isa = PBXGroup;
+			children = (
+				F11B779B20740ACF00DC8089 /* AppDelegate.swift */,
+				F11B779D20740ACF00DC8089 /* ViewController.swift */,
+				F11B779F20740ACF00DC8089 /* Main.storyboard */,
+				F11B77A220740ACF00DC8089 /* Assets.xcassets */,
+				F11B77A420740ACF00DC8089 /* LaunchScreen.storyboard */,
+				F11B77A720740ACF00DC8089 /* Info.plist */,
+			);
+			path = ElevateYourMorning;
+			sourceTree = "<group>";
+		};
+		F11B77AF20740AD000DC8089 /* ElevateYourMorningTests */ = {
+			isa = PBXGroup;
+			children = (
+				F11B77B020740AD000DC8089 /* ElevateYourMorningTests.swift */,
+				F11B77B220740AD000DC8089 /* Info.plist */,
+			);
+			path = ElevateYourMorningTests;
+			sourceTree = "<group>";
+		};
+		F11B77B920740AD000DC8089 /* ElevateYourMorning WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				F11B77BA20740AD000DC8089 /* Interface.storyboard */,
+				F11B77BD20740AD000DC8089 /* Assets.xcassets */,
+				F11B77BF20740AD000DC8089 /* Info.plist */,
+			);
+			path = "ElevateYourMorning WatchKit App";
+			sourceTree = "<group>";
+		};
+		F11B77C820740AD000DC8089 /* ElevateYourMorning WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F11B77C920740AD000DC8089 /* InterfaceController.swift */,
+				F11B77CB20740AD000DC8089 /* ExtensionDelegate.swift */,
+				F11B77CD20740AD000DC8089 /* NotificationController.swift */,
+				F11B77CF20740AD000DC8089 /* Assets.xcassets */,
+				F11B77D120740AD000DC8089 /* Info.plist */,
+				F11B77D220740AD000DC8089 /* PushNotificationPayload.apns */,
+			);
+			path = "ElevateYourMorning WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F11B779720740ACF00DC8089 /* ElevateYourMorning */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F11B77DD20740AD000DC8089 /* Build configuration list for PBXNativeTarget "ElevateYourMorning" */;
+			buildPhases = (
+				F11B779420740ACF00DC8089 /* Sources */,
+				F11B779520740ACF00DC8089 /* Frameworks */,
+				F11B779620740ACF00DC8089 /* Resources */,
+				F11B77DC20740AD000DC8089 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F11B77B820740AD000DC8089 /* PBXTargetDependency */,
+			);
+			name = ElevateYourMorning;
+			productName = ElevateYourMorning;
+			productReference = F11B779820740ACF00DC8089 /* ElevateYourMorning.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F11B77AB20740ACF00DC8089 /* ElevateYourMorningTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F11B77E020740AD000DC8089 /* Build configuration list for PBXNativeTarget "ElevateYourMorningTests" */;
+			buildPhases = (
+				F11B77A820740ACF00DC8089 /* Sources */,
+				F11B77A920740ACF00DC8089 /* Frameworks */,
+				F11B77AA20740ACF00DC8089 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F11B77AE20740AD000DC8089 /* PBXTargetDependency */,
+			);
+			name = ElevateYourMorningTests;
+			productName = ElevateYourMorningTests;
+			productReference = F11B77AC20740AD000DC8089 /* ElevateYourMorningTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F11B77B420740AD000DC8089 /* ElevateYourMorning WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F11B77D920740AD000DC8089 /* Build configuration list for PBXNativeTarget "ElevateYourMorning WatchKit App" */;
+			buildPhases = (
+				F11B77B320740AD000DC8089 /* Resources */,
+				F11B77D820740AD000DC8089 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F11B77C720740AD000DC8089 /* PBXTargetDependency */,
+			);
+			name = "ElevateYourMorning WatchKit App";
+			productName = "ElevateYourMorning WatchKit App";
+			productReference = F11B77B520740AD000DC8089 /* ElevateYourMorning WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		F11B77C320740AD000DC8089 /* ElevateYourMorning WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F11B77D520740AD000DC8089 /* Build configuration list for PBXNativeTarget "ElevateYourMorning WatchKit Extension" */;
+			buildPhases = (
+				F11B77C020740AD000DC8089 /* Sources */,
+				F11B77C120740AD000DC8089 /* Frameworks */,
+				F11B77C220740AD000DC8089 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ElevateYourMorning WatchKit Extension";
+			productName = "ElevateYourMorning WatchKit Extension";
+			productReference = F11B77C420740AD000DC8089 /* ElevateYourMorning WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F11B779020740ACF00DC8089 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Nancy Vidales";
+				TargetAttributes = {
+					F11B779720740ACF00DC8089 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					F11B77AB20740ACF00DC8089 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F11B779720740ACF00DC8089;
+					};
+					F11B77B420740AD000DC8089 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					F11B77C320740AD000DC8089 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F11B779320740ACF00DC8089 /* Build configuration list for PBXProject "ElevateYourMorning" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F11B778F20740ACF00DC8089;
+			productRefGroup = F11B779920740ACF00DC8089 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F11B779720740ACF00DC8089 /* ElevateYourMorning */,
+				F11B77AB20740ACF00DC8089 /* ElevateYourMorningTests */,
+				F11B77B420740AD000DC8089 /* ElevateYourMorning WatchKit App */,
+				F11B77C320740AD000DC8089 /* ElevateYourMorning WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F11B779620740ACF00DC8089 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F11B77A620740ACF00DC8089 /* LaunchScreen.storyboard in Resources */,
+				F11B77A320740ACF00DC8089 /* Assets.xcassets in Resources */,
+				F11B77A120740ACF00DC8089 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F11B77AA20740ACF00DC8089 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F11B77B320740AD000DC8089 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F11B77BE20740AD000DC8089 /* Assets.xcassets in Resources */,
+				F11B77BC20740AD000DC8089 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F11B77C220740AD000DC8089 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F11B77D020740AD000DC8089 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F11B779420740ACF00DC8089 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F11B779E20740ACF00DC8089 /* ViewController.swift in Sources */,
+				F11B779C20740ACF00DC8089 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F11B77A820740ACF00DC8089 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F11B77B120740AD000DC8089 /* ElevateYourMorningTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F11B77C020740AD000DC8089 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F11B77CE20740AD000DC8089 /* NotificationController.swift in Sources */,
+				F11B77CC20740AD000DC8089 /* ExtensionDelegate.swift in Sources */,
+				F11B77CA20740AD000DC8089 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F11B77AE20740AD000DC8089 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F11B779720740ACF00DC8089 /* ElevateYourMorning */;
+			targetProxy = F11B77AD20740AD000DC8089 /* PBXContainerItemProxy */;
+		};
+		F11B77B820740AD000DC8089 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F11B77B420740AD000DC8089 /* ElevateYourMorning WatchKit App */;
+			targetProxy = F11B77B720740AD000DC8089 /* PBXContainerItemProxy */;
+		};
+		F11B77C720740AD000DC8089 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F11B77C320740AD000DC8089 /* ElevateYourMorning WatchKit Extension */;
+			targetProxy = F11B77C620740AD000DC8089 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F11B779F20740ACF00DC8089 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F11B77A020740ACF00DC8089 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F11B77A420740ACF00DC8089 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F11B77A520740ACF00DC8089 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F11B77BA20740AD000DC8089 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F11B77BB20740AD000DC8089 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F11B77D320740AD000DC8089 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F11B77D420740AD000DC8089 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F11B77D620740AD000DC8089 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MQF6XZ4BT5;
+				INFOPLIST_FILE = "ElevateYourMorning WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.NancyVidales.ElevateYourMorning.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Debug;
+		};
+		F11B77D720740AD000DC8089 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MQF6XZ4BT5;
+				INFOPLIST_FILE = "ElevateYourMorning WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.NancyVidales.ElevateYourMorning.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Release;
+		};
+		F11B77DA20740AD000DC8089 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MQF6XZ4BT5;
+				IBSC_MODULE = ElevateYourMorning_WatchKit_Extension;
+				INFOPLIST_FILE = "ElevateYourMorning WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.NancyVidales.ElevateYourMorning.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Debug;
+		};
+		F11B77DB20740AD000DC8089 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MQF6XZ4BT5;
+				IBSC_MODULE = ElevateYourMorning_WatchKit_Extension;
+				INFOPLIST_FILE = "ElevateYourMorning WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.NancyVidales.ElevateYourMorning.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Release;
+		};
+		F11B77DE20740AD000DC8089 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MQF6XZ4BT5;
+				INFOPLIST_FILE = ElevateYourMorning/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.NancyVidales.ElevateYourMorning;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F11B77DF20740AD000DC8089 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MQF6XZ4BT5;
+				INFOPLIST_FILE = ElevateYourMorning/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.NancyVidales.ElevateYourMorning;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F11B77E120740AD000DC8089 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MQF6XZ4BT5;
+				INFOPLIST_FILE = ElevateYourMorningTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.NancyVidales.ElevateYourMorningTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ElevateYourMorning.app/ElevateYourMorning";
+			};
+			name = Debug;
+		};
+		F11B77E220740AD000DC8089 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MQF6XZ4BT5;
+				INFOPLIST_FILE = ElevateYourMorningTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.NancyVidales.ElevateYourMorningTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ElevateYourMorning.app/ElevateYourMorning";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F11B779320740ACF00DC8089 /* Build configuration list for PBXProject "ElevateYourMorning" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F11B77D320740AD000DC8089 /* Debug */,
+				F11B77D420740AD000DC8089 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F11B77D520740AD000DC8089 /* Build configuration list for PBXNativeTarget "ElevateYourMorning WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F11B77D620740AD000DC8089 /* Debug */,
+				F11B77D720740AD000DC8089 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F11B77D920740AD000DC8089 /* Build configuration list for PBXNativeTarget "ElevateYourMorning WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F11B77DA20740AD000DC8089 /* Debug */,
+				F11B77DB20740AD000DC8089 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F11B77DD20740AD000DC8089 /* Build configuration list for PBXNativeTarget "ElevateYourMorning" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F11B77DE20740AD000DC8089 /* Debug */,
+				F11B77DF20740AD000DC8089 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F11B77E020740AD000DC8089 /* Build configuration list for PBXNativeTarget "ElevateYourMorningTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F11B77E120740AD000DC8089 /* Debug */,
+				F11B77E220740AD000DC8089 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F11B779020740ACF00DC8089 /* Project object */;
+}
