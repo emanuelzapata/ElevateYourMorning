@@ -27,7 +27,7 @@ import UIKit
 class Alarm: NSObject {
     
     var time: Date!
-    var time_str: String!
+    var time_str = "00:00"
     var alarm_label = "Alarm"
     var on_off_btn = true
     
