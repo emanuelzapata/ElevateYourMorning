@@ -8,6 +8,8 @@
 
 import UIKit
 
+//edit or delete selected alarm
+
 class EditViewController: UIViewController {
 
     override func viewDidLoad() {

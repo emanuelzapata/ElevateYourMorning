@@ -8,6 +8,14 @@
 
 import UIKit
 
+/*
+ TO DO:
+    -Add time label (from Alarms array time_str property
+    -Add days of the week buttons and set corresponding font color (on/off from Alarms array dictionary)
+    -Add on/off button and set corresponding image (Alarms array on_off_btn)
+ 
+ */
+
 class AlarmTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {

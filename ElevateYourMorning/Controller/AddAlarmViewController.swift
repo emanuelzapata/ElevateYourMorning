@@ -8,6 +8,10 @@
 
 import UIKit
 
+//Add to Alarms array
+//use parse helper function
+//set everything to default
+
 class AddAlarmViewController: UIViewController {
 
     override func viewDidLoad() {
