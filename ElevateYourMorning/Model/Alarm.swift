@@ -27,15 +27,34 @@ import UIKit
 class Alarm: NSObject {
     
     var time: Date!
-    var time_str = "00:00"
+    var time_str = "7:00"
     var alarm_label = "Alarm"
     var on_off_btn = true
     
-    var days_of_the_week: [String:Bool] = ["sun":true, "mon":true, "tue":true, "wed":true, "thu":true, "fri":true, "sat":true]
+    var days_of_the_week: [String:Bool] = ["sun":false, "mon":false, "tue":false, "wed":false, "thu":false, "fri":false, "sat":false]
     
-    
+
     func parse_date(){
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        time_str = dateFormatter.string(from: time)
         
+    }
+    
+    func display(){
+        NSLog(time_str)
+        NSLog(alarm_label)
+        if(on_off_btn == true){
+            NSLog("alarm: on")
+        }
+        else{
+            NSLog("alarm: off")
+        }
+        for (day, status) in days_of_the_week{
+            if(status == true){
+                NSLog("on for day \(day)")
+            }
+        }
     }
 
    

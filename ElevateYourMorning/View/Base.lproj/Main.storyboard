@@ -191,6 +191,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="aMV-S9-Tez">
+                                <rect key="frame" x="0.0" y="58" width="320" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="544558694.39881301">
+                                    <!--2018-04-04 18:18:14 +0000-->
+                                </date>
+                            </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wBw-CJ-XLk">
                                 <rect key="frame" x="0.0" y="341" width="320" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -285,13 +292,16 @@
                                     <action selector="mon_btn_pressed:" destination="JOt-EN-QhH" eventType="touchUpInside" id="cqp-0a-vnX"/>
                                 </connections>
                             </button>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="aMV-S9-Tez">
-                                <rect key="frame" x="0.0" y="58" width="320" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <date key="date" timeIntervalSinceReferenceDate="544558694.39881301">
-                                    <!--2018-04-04 18:18:14 +0000-->
-                                </date>
-                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arb-l7-I9K">
+                                <rect key="frame" x="110" y="474" width="101" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="26"/>
+                                <state key="normal" title="save"/>
+                                <connections>
+                                    <action selector="save_btn_pressed:" destination="JOt-EN-QhH" eventType="touchUpInside" id="Ayr-RS-TpR"/>
+                                    <segue destination="5dT-Sw-1TX" kind="show" id="A9K-ML-vyy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="eh0-t2-Ru3"/>
@@ -304,6 +314,162 @@
             </objects>
             <point key="canvasLocation" x="301.875" y="523.94366197183103"/>
         </scene>
+        <!--Edit View Controller-->
+        <scene sceneID="HQR-uw-GBh">
+            <objects>
+                <viewController id="ezL-kD-hVV" customClass="EditViewController" customModule="ElevateYourMorning" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Xc-oU-PBo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="icg-bH-KSj">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPL-cq-fXq">
+                                <rect key="frame" x="0.0" y="231" width="320" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uk9-Sr-Tvf">
+                                <rect key="frame" x="56" y="282" width="46" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="35"/>
+                                <state key="normal" title="T">
+                                    <color key="titleColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="thu_btn_pressed:" destination="ezL-kD-hVV" eventType="touchUpInside" id="taJ-nB-CT5"/>
+                                    <action selector="tue_btn_pressed:" destination="JOt-EN-QhH" eventType="touchUpInside" id="fv1-7E-1fC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBl-tB-8Ql">
+                                <rect key="frame" x="165" y="231" width="46" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="35"/>
+                                <state key="normal" title="T">
+                                    <color key="titleColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="thu_btn_pressed:" destination="JOt-EN-QhH" eventType="touchUpInside" id="pQW-Cg-d9F"/>
+                                    <action selector="tue_btn_pressed:" destination="ezL-kD-hVV" eventType="touchUpInside" id="g1A-0h-EhV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53C-06-J1L">
+                                <rect key="frame" x="121" y="484" width="79" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="cancel"/>
+                                <connections>
+                                    <action selector="cancel_btn_pressed:" destination="CSC-xU-tyX" eventType="touchUpInside" id="ewh-Dl-0mq"/>
+                                    <segue destination="5dT-Sw-1TX" kind="show" id="xGw-y7-xsm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UEU-6I-FgA">
+                                <rect key="frame" x="95" y="231" width="46" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="35"/>
+                                <state key="normal" title="M">
+                                    <color key="titleColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="mon_btn_pressed:" destination="ezL-kD-hVV" eventType="touchUpInside" id="LiN-7m-5ZH"/>
+                                    <action selector="mon_btn_pressed:" destination="JOt-EN-QhH" eventType="touchUpInside" id="tII-cF-c4R"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whs-JI-n7W">
+                                <rect key="frame" x="137" y="283" width="46" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="35"/>
+                                <state key="normal" title="F">
+                                    <color key="titleColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="fri_btn_pressed:" destination="ezL-kD-hVV" eventType="touchUpInside" id="bCh-sR-0Uh"/>
+                                    <action selector="fri_btn_pressed:" destination="JOt-EN-QhH" eventType="touchUpInside" id="nAT-eV-UHd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yie-CX-DJj">
+                                <rect key="frame" x="207" y="289" width="46" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="35"/>
+                                <state key="normal" title="S">
+                                    <color key="titleColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sat_btn_pressed:" destination="ezL-kD-hVV" eventType="touchUpInside" id="fVQ-tr-Obq"/>
+                                    <action selector="sun_btn_pressed:" destination="JOt-EN-QhH" eventType="touchUpInside" id="trF-IN-y5m"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GVi-eq-Jxh">
+                                <rect key="frame" x="245" y="231" width="46" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="35"/>
+                                <state key="normal" title="W">
+                                    <color key="titleColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="wed_btn_pressed:" destination="ezL-kD-hVV" eventType="touchUpInside" id="evI-w0-FAD"/>
+                                    <action selector="wed_btn_pressed:" destination="JOt-EN-QhH" eventType="touchUpInside" id="i2I-Ph-ZGQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YRt-UX-ZJ6">
+                                <rect key="frame" x="23" y="238" width="46" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="35"/>
+                                <state key="normal" title="S">
+                                    <color key="titleColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sat_btn_pressed:" destination="JOt-EN-QhH" eventType="touchUpInside" id="d98-1w-8Rv"/>
+                                    <action selector="sun_btn_pressed:" destination="ezL-kD-hVV" eventType="touchUpInside" id="jMT-SM-GDW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GDB-Cf-R5s">
+                                <rect key="frame" x="110" y="436" width="101" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="26"/>
+                                <state key="normal" title="save"/>
+                                <connections>
+                                    <action selector="save_btn_pressed:" destination="ezL-kD-hVV" eventType="touchUpInside" id="p8X-cq-Yuo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19X-78-XQI">
+                                <rect key="frame" x="109" y="398" width="103" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="25"/>
+                                <state key="normal" title="delete"/>
+                                <connections>
+                                    <action selector="delete_btn_pressed:" destination="ezL-kD-hVV" eventType="touchUpInside" id="gdp-yu-aa3"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="m8d-ZV-Tez">
+                                <rect key="frame" x="0.0" y="61" width="320" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="544568134.03786504">
+                                    <!--2018-04-04 20:55:34 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="timePicker:" destination="CSC-xU-tyX" eventType="valueChanged" id="1H0-xm-HKP"/>
+                                </connections>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="wq5-eA-r4Z"/>
+                    </view>
+                    <connections>
+                        <outlet property="save_btn_pressed" destination="GDB-Cf-R5s" id="jd0-B0-Ruk"/>
+                        <outlet property="timePicker" destination="m8d-ZV-Tez" id="E6B-Gw-eQi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Z4-m2-cdg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="CSC-xU-tyX" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-390" y="1330.9859154929577"/>
+        </scene>
     </scenes>
     <resources>
         <image name="add_alarm_button" width="375" height="55"/>
@@ -312,8 +478,7 @@
         <image name="edit_button" width="7" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="RFp-RC-zeN"/>
-        <segue reference="RDZ-TA-UtC"/>
+        <segue reference="xGw-y7-xsm"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

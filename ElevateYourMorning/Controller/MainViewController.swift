@@ -9,7 +9,7 @@
 import UIKit
 
 //array of Alarm objects
-let Alarms = [Alarm]()
+var Alarms = [Alarm]()
 
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
@@ -39,15 +39,23 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         NSLog("add alarm button pressed")
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1 //size of Alarm array
+        if(Alarms.count == 0 ){
+            let defaultAlarm = Alarm()
+            defaultAlarm.time_str = "7:00"
+            Alarms.append(defaultAlarm)
+            return 1
+        }
+        else{
+            return Alarms.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "alarm_cell") as! AlarmTableViewCell
         cell.layer.cornerRadius = 45;
-        cell.time_label.text = "00:00"
+        cell.time_label.text = Alarms[indexPath.row].time_str
         //change value of on/off button
-        //cell.on_off_btn_pressed(alarm: Alarms[indexPath.row])
+        cell.on_off_btn_pressed(alarm: Alarms[indexPath.row])
         return cell
     }
     
