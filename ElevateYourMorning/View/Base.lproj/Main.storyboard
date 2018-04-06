@@ -40,7 +40,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="m1S-Zi-quq">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="new_background" translatesAutoresizingMaskIntoConstraints="NO" id="m1S-Zi-quq">
                                 <rect key="frame" x="0.0" y="-99" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -126,7 +126,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" image="edit_button"/>
                                                     <connections>
-                                                        <action selector="edit_btn_pressed:" destination="LbO-Ka-uCw" eventType="touchUpInside" id="Cbe-7X-MLX"/>
+                                                        <segue destination="ezL-kD-hVV" kind="show" id="DB9-0X-bBG"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -151,7 +151,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="jT9-xd-ote"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="add_alarm_button"/>
+                                <state key="normal" title="Add Alarm" image="add_alarm_button"/>
                                 <connections>
                                     <action selector="add_alarm_btn_pressed:" destination="5dT-Sw-1TX" eventType="touchUpInside" id="8nL-TW-yxe"/>
                                     <segue destination="JOt-EN-QhH" kind="show" id="RFp-RC-zeN"/>
@@ -187,7 +187,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="e58-3I-8hB">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="new_background" translatesAutoresizingMaskIntoConstraints="NO" id="e58-3I-8hB">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -322,7 +322,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="icg-bH-KSj">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="new_background" translatesAutoresizingMaskIntoConstraints="NO" id="icg-bH-KSj">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -364,8 +364,7 @@
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
                                 <state key="normal" title="cancel"/>
                                 <connections>
-                                    <action selector="cancel_btn_pressed:" destination="CSC-xU-tyX" eventType="touchUpInside" id="ewh-Dl-0mq"/>
-                                    <segue destination="5dT-Sw-1TX" kind="show" id="xGw-y7-xsm"/>
+                                    <segue destination="5dT-Sw-1TX" kind="show" id="gke-ze-Tv5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UEU-6I-FgA">
@@ -433,9 +432,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="26"/>
                                 <state key="normal" title="save"/>
-                                <connections>
-                                    <action selector="save_btn_pressed:" destination="ezL-kD-hVV" eventType="touchUpInside" id="p8X-cq-Yuo"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19X-78-XQI">
                                 <rect key="frame" x="109" y="398" width="103" height="30"/>
@@ -443,7 +439,7 @@
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="25"/>
                                 <state key="normal" title="delete"/>
                                 <connections>
-                                    <action selector="delete_btn_pressed:" destination="ezL-kD-hVV" eventType="touchUpInside" id="gdp-yu-aa3"/>
+                                    <action selector="delete_btn_pressed:" destination="ezL-kD-hVV" eventType="touchUpInside" id="gx9-uQ-pV4"/>
                                 </connections>
                             </button>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="m8d-ZV-Tez">
@@ -461,7 +457,6 @@
                         <viewLayoutGuide key="safeArea" id="wq5-eA-r4Z"/>
                     </view>
                     <connections>
-                        <outlet property="save_btn_pressed" destination="GDB-Cf-R5s" id="jd0-B0-Ruk"/>
                         <outlet property="timePicker" destination="m8d-ZV-Tez" id="E6B-Gw-eQi"/>
                     </connections>
                 </viewController>
@@ -474,11 +469,12 @@
     <resources>
         <image name="add_alarm_button" width="375" height="55"/>
         <image name="alarm_on" width="51" height="47"/>
-        <image name="background" width="375" height="667"/>
         <image name="edit_button" width="7" height="30"/>
+        <image name="new_background" width="375" height="667"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xGw-y7-xsm"/>
+        <segue reference="DB9-0X-bBG"/>
+        <segue reference="gke-ze-Tv5"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

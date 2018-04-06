@@ -27,6 +27,8 @@ class AddAlarmViewController: UIViewController {
     @IBAction func save_btn_pressed(_ sender: Any) {
         new_alarm.time = timePicker.date
         new_alarm.parse_date()
+        counter+=1;
+        new_alarm.id = counter;
         new_alarm.display()
         Alarms.append(new_alarm)
     }

@@ -14,11 +14,12 @@ class EditViewController: UIViewController {
 
     
     @IBOutlet weak var timePicker: UIDatePicker!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        timePicker.date = editAlarm.time
+
     }
 
     
@@ -26,13 +27,11 @@ class EditViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-  
-    @IBAction func save_btn_pressed(_ sender: Any) {
-    }
+
     
     @IBAction func delete_btn_pressed(_ sender: Any) {
+  
     }
-    
     
     @IBAction func sun_btn_pressed(_ sender: UIButton) {
         if(sender.currentTitleColor != UIColor.red){

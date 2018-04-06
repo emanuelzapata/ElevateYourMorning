@@ -30,6 +30,7 @@ class Alarm: NSObject {
     var time_str = "7:00"
     var alarm_label = "Alarm"
     var on_off_btn = true
+    var id = 0
     
     var days_of_the_week: [String:Bool] = ["sun":false, "mon":false, "tue":false, "wed":false, "thu":false, "fri":false, "sat":false]
     
@@ -55,6 +56,7 @@ class Alarm: NSObject {
                 NSLog("on for day \(day)")
             }
         }
+        NSLog("id: \(id)")
     }
 
    

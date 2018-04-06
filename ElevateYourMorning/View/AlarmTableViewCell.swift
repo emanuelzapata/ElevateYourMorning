@@ -54,6 +54,8 @@ class AlarmTableViewCell: UITableViewCell {
     */
     @IBAction func edit_btn_pressed(_ sender: Any) {
         //change view
+        NSLog("edit pressed")
+        
     }
     
     
@@ -62,5 +64,6 @@ class AlarmTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
 
 }

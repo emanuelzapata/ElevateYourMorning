@@ -10,6 +10,8 @@ import UIKit
 
 //array of Alarm objects
 var Alarms = [Alarm]()
+var counter = 0;
+var editAlarm: Alarm!
 
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
@@ -43,6 +45,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             let defaultAlarm = Alarm()
             defaultAlarm.time_str = "7:00"
             Alarms.append(defaultAlarm)
+            
             return 1
         }
         else{
@@ -56,10 +59,71 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.time_label.text = Alarms[indexPath.row].time_str
         //change value of on/off button
         cell.on_off_btn_pressed(alarm: Alarms[indexPath.row])
+        //sendInfo(toEdit: Alarms[indexPath.row])
+        
+        //days of the week
+        self.labelColors(alarm: Alarms[indexPath.row], cell: cell)
+        
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        Alarms[indexPath.row].display()
+    }
+    func sendInfo(toEdit: Alarm){
+        editAlarm = toEdit;
+    }
     
+    func labelColors(alarm: Alarm, cell: AlarmTableViewCell){
+        if(alarm.days_of_the_week["sun"] == true){
+            cell.sun_label.textColor = UIColor.red
+        }
+        else{
+            cell.sun_label.textColor = UIColor.darkGray
+        }
+        
+        if(alarm.days_of_the_week["mon"] == true){
+            cell.mon_label.textColor = UIColor.red
+        }
+        else{
+            cell.mon_label.textColor = UIColor.darkGray
+        }
+        
+        if(alarm.days_of_the_week["tue"] == true){
+            cell.tue_label.textColor = UIColor.red
+        }
+        else{
+            cell.tue_label.textColor = UIColor.darkGray
+        }
+        
+        if(alarm.days_of_the_week["wed"] == true){
+            cell.wed_label.textColor = UIColor.red
+        }
+        else{
+            cell.wed_label.textColor = UIColor.darkGray
+        }
+        
+        if(alarm.days_of_the_week["thu"] == true){
+            cell.thu_label.textColor = UIColor.red
+        }
+        else{
+            cell.thu_label.textColor = UIColor.darkGray
+        }
+        
+        if(alarm.days_of_the_week["fri"] == true){
+            cell.fri_label.textColor = UIColor.red
+        }
+        else{
+            cell.fri_label.textColor = UIColor.darkGray
+        }
+        
+        if(alarm.days_of_the_week["sat"] == true){
+            cell.sat_label.textColor = UIColor.red
+        }
+        else{
+            cell.sat_label.textColor = UIColor.darkGray
+        }
+    }
   
 }
 
