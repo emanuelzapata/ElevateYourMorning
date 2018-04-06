@@ -473,8 +473,7 @@
         <image name="new_background" width="375" height="667"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DB9-0X-bBG"/>
-        <segue reference="gke-ze-Tv5"/>
+        <segue reference="DbD-Ig-3q3"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

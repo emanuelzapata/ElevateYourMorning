@@ -6,16 +6,26 @@
 //  Copyright © 2018 Nancy Vidales. All rights reserved.
 //
 
+/*
+ TO DO:
+    -change heart button to a label, figure out how to change on touch
+    -when dequeuing cells use onLabel function to make sure it matches
+ 
+ */
+
 import UIKit
+import UserNotifications
 
 //array of Alarm objects
 var Alarms = [Alarm]()
 var counter = 0;
 var editAlarm: Alarm!
 
+
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var add_button: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
@@ -25,6 +35,31 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        /*
+            Notification Stuff
+        */
+        
+        //content
+        let content = UNMutableNotificationContent()
+        content.title = "Title"
+        content.body = "Body"
+        content.sound = UNNotificationSound.default()
+        
+        //trigger
+        for a in Alarms{
+            var time = DateComponents()
+            time = self.formatDateComponent(alarm: a)
+            let trigger = UNCalendarNotificationTrigger(dateMatching: time, repeats: true)
+            
+            //request
+            let request = UNNotificationRequest(identifier: "testIdentifier", content: content, trigger: trigger)
+            
+            //send notification
+            UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+        }
+        
+        
     }
     
     @IBAction func on_off_btn_pressed(_ sender: UIButton) {
@@ -44,6 +79,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         if(Alarms.count == 0 ){
             let defaultAlarm = Alarm()
             defaultAlarm.time_str = "7:00"
+            defaultAlarm.time = Date()
             Alarms.append(defaultAlarm)
             
             return 1
@@ -57,8 +93,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCell(withIdentifier: "alarm_cell") as! AlarmTableViewCell
         cell.layer.cornerRadius = 45;
         cell.time_label.text = Alarms[indexPath.row].time_str
-        //change value of on/off button
-        cell.on_off_btn_pressed(alarm: Alarms[indexPath.row])
+
         //sendInfo(toEdit: Alarms[indexPath.row])
         
         //days of the week
@@ -72,6 +107,16 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     func sendInfo(toEdit: Alarm){
         editAlarm = toEdit;
+    }
+    
+    
+    /*
+        make sure on/off heart matches
+    */
+    func onLabel(alarm: Alarm, cell: AlarmTableViewCell){
+        if(alarm.on_off_btn == true){
+            
+        }
     }
     
     func labelColors(alarm: Alarm, cell: AlarmTableViewCell){
@@ -123,6 +168,19 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         else{
             cell.sat_label.textColor = UIColor.darkGray
         }
+    }
+    
+    func formatDateComponent(alarm: Alarm) -> DateComponents{
+        var date = DateComponents()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH"
+        var timeStr = dateFormatter.string(from: alarm.time)
+        date.hour = Int(timeStr)
+        dateFormatter.dateFormat = "mm"
+        timeStr = dateFormatter.string(from: alarm.time)
+        date.minute = Int(timeStr)
+        
+        return date
     }
   
 }

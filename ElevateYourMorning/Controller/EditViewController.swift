@@ -18,7 +18,6 @@ class EditViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        timePicker.date = editAlarm.time
 
     }
 
