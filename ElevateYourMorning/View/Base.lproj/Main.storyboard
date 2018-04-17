@@ -302,11 +302,19 @@
                                     <segue destination="5dT-Sw-1TX" kind="show" id="A9K-ML-vyy"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="54K-4u-vkk">
+                                <rect key="frame" x="82" y="274" width="183" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="eh0-t2-Ru3"/>
                     </view>
                     <connections>
+                        <outlet property="fromWatchLabel" destination="54K-4u-vkk" id="E8v-QX-H71"/>
                         <outlet property="timePicker" destination="aMV-S9-Tez" id="RrS-lf-lAH"/>
                     </connections>
                 </viewController>
@@ -473,7 +481,7 @@
         <image name="new_background" width="375" height="667"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DbD-Ig-3q3"/>
+        <segue reference="RDZ-TA-UtC"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

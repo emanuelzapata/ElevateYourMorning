@@ -15,6 +15,7 @@
 
 import UIKit
 import UserNotifications
+import WatchConnectivity
 
 //array of Alarm objects
 var Alarms = [Alarm]()
@@ -25,6 +26,8 @@ var editAlarm: Alarm!
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var add_button: UIButton!
+    
+    let session = WCSession.default
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,6 +61,9 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             //send notification
             UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
         }
+        
+        //watch
+        NotificationCenter.default.addObserver(self, selector: #selector(watchRecieve), name: NSNotification.Name(rawValue: "reeivedWatchMessage"), object: nil)
         
         
     }
@@ -93,7 +99,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCell(withIdentifier: "alarm_cell") as! AlarmTableViewCell
         cell.layer.cornerRadius = 45;
         cell.time_label.text = Alarms[indexPath.row].time_str
-
+        //cell.alarm = Alarms[indexPath.row]
         //sendInfo(toEdit: Alarms[indexPath.row])
         
         //days of the week
@@ -181,6 +187,15 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         date.minute = Int(timeStr)
         
         return date
+    }
+    
+    @objc func watchRecieve(info: NSNotification){
+        let message = info.userInfo!
+     
+        DispatchQueue.main.async {
+            //self.fromWatchLabel.text = message["msg"] as? String
+        }
+        
     }
   
 }

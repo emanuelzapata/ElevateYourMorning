@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>ElevateYourMorning WatchKit App 2.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>ElevateYourMorning WatchKit App.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +23,24 @@
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>F11B779720740ACF00DC8089</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F11B77AB20740ACF00DC8089</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F11B77B420740AD000DC8089</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

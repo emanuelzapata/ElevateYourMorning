@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WatchConnectivity
 
 //Add to Alarms array
 //use parse helper function
@@ -14,7 +15,9 @@ import UIKit
 class AddAlarmViewController: UIViewController {
     
     let new_alarm = Alarm()
+    let session = WCSession.default
 
+    @IBOutlet weak var fromWatchLabel: UILabel!
     @IBOutlet weak var timePicker: UIDatePicker!
 
     
@@ -22,6 +25,18 @@ class AddAlarmViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(watchReceieve), name: NSNotification.Name(rawValue: "receivedWatchMessage"), object: nil)
+    }
+    
+    @objc func watchReceieve(info: NSNotification){
+        let message = info.userInfo!
+        DispatchQueue.main.async {
+            NSLog("here!!!")
+            self.fromWatchLabel.text = message["msg"] as? String
+        
+        }
+        
     }
 
     @IBAction func save_btn_pressed(_ sender: Any) {

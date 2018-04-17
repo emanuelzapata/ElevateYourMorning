@@ -8,13 +8,15 @@
 
 import UIKit
 import UserNotifications
+import WatchConnectivity
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate, WCSessionDelegate {
 
     var window: UIWindow?
 
-
+    
+ 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
@@ -24,10 +26,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             print("granted: \(granted)")
         }
         
+        //watch stuff
+        if WCSession.isSupported() {
+            let session = WCSession.default
+            session.delegate = self
+            session.activate()
+        }
+        
         
         return true
     }
 
+    //watch stuff
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        //do stuff
+    }
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        //do stuff
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        //do stuff
+    }
+    
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+        //do stuff
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "receivedWatchMessage"), object: self, userInfo: message)
+    }
+    
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         if response.notification.request.identifier == "testIdentifier"{
             print("handling notification with the identifier 'testIdentifier'")

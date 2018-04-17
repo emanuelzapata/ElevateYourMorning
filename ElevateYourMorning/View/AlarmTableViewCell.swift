@@ -18,6 +18,8 @@ import UIKit
 
 class AlarmTableViewCell: UITableViewCell {
     
+    var alarm = Alarm()
+    
     @IBOutlet weak var time_label: UILabel!
     @IBOutlet weak var sun_label: UILabel!
     @IBOutlet weak var mon_label: UILabel!
