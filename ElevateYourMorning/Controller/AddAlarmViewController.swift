@@ -32,7 +32,6 @@ class AddAlarmViewController: UIViewController {
     @objc func watchReceieve(info: NSNotification){
         let message = info.userInfo!
         DispatchQueue.main.async {
-            NSLog("here!!!")
             self.fromWatchLabel.text = message["msg"] as? String
         
         }

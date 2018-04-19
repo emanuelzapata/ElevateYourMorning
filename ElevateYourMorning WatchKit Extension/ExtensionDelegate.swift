@@ -8,6 +8,7 @@
 
 import WatchKit
 import WatchConnectivity
+import HealthKit
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate {
     
@@ -26,6 +27,23 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate {
             let session = WCSession.default
             session.delegate = self
             session.activate()
+        }
+        
+        if HKHealthStore.isHealthDataAvailable() {
+            // Add code to use HealthKit here.
+            NSLog("healthkit available")
+            
+            let healthStore = HKHealthStore()
+            
+            let allTypes = Set([HKObjectType.workoutType(),
+                                HKObjectType.quantityType(forIdentifier: .heartRate)!])
+            
+            healthStore.requestAuthorization(toShare: allTypes, read: allTypes) { (success, error) in
+                if !success {
+                    // Handle the error here.
+                    NSLog("There was an error with HealthKit permissions")
+                }
+            }
         }
     }
 

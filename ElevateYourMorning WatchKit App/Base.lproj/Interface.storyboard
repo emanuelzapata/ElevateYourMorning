@@ -24,6 +24,11 @@
                                 <action selector="startTapped" destination="AgC-eL-Hgc" id="PG2-zo-1pH"/>
                             </connections>
                         </button>
+                        <button width="1" alignment="left" title="End" id="wOW-dQ-7xa">
+                            <connections>
+                                <action selector="endTapped" destination="AgC-eL-Hgc" id="jEI-fH-tsH"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
                         <outlet property="BPMLabel" destination="a44-eu-8WO" id="1ID-zB-05N"/>

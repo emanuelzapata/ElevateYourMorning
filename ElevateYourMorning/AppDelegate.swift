@@ -9,6 +9,7 @@
 import UIKit
 import UserNotifications
 import WatchConnectivity
+import HealthKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate, WCSessionDelegate {
@@ -16,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     var window: UIWindow?
 
     
- 
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
@@ -33,6 +34,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             session.activate()
         }
         
+        //health kit stuff
+        
+        if HKHealthStore.isHealthDataAvailable() {
+            // Add code to use HealthKit here.
+            NSLog("healthkit available iOS")
+            
+            let healthStore = HKHealthStore()
+            let allTypes = Set([HKObjectType.workoutType(),
+                                HKObjectType.quantityType(forIdentifier: .heartRate)!])
+            
+            
+            healthStore.requestAuthorization(toShare: allTypes, read: allTypes) { (success, error) in
+                if !success {
+                    // Handle the error here.
+                    NSLog("There was an error with HealthKit permissions")
+                }
+                else{
+                    NSLog("healthkit presmission success")
+                }
+            }
+            
+            
+        }
         
         return true
     }
