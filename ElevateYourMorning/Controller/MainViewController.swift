@@ -16,12 +16,13 @@
 import UIKit
 import UserNotifications
 import WatchConnectivity
+import AVFoundation
 
 //array of Alarm objects
 var Alarms = [Alarm]()
 var counter = 0;
 var editAlarm: Alarm!
-
+var player: AVAudioPlayer?
 
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
@@ -49,7 +50,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         content.body = "Body"
         content.sound = UNNotificationSound.default()
         
-        //trigger
+        //trigger the alarm
         for a in Alarms{
             var time = DateComponents()
             time = self.formatDateComponent(alarm: a)
@@ -60,6 +61,23 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             //send notification
             UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+            
+            //play alarm
+            guard let url = Bundle.main.url(forResource:"GrinchScream", withExtension: "mp3") else{return}
+            
+            do{
+                try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+                try AVAudioSession.sharedInstance().setActive(true)
+                
+                player = try AVAudioPlayer(contentsOf:url, fileTypeHint:AVFileType.mp3.rawValue)
+                
+                guard let player = player else {return}
+                player.play()
+            }
+            catch{
+                //catching errors
+                print(error.localizedDescription)
+            }
         }
         
         //watch
