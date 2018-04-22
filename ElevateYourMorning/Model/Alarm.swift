@@ -31,6 +31,7 @@ class Alarm: NSObject {
     var alarm_label = "Alarm"
     var on_off_btn = true
     var id = 0
+    var heartrate = 100
     
     var days_of_the_week: [String:Bool] = ["sun":false, "mon":false, "tue":false, "wed":false, "thu":false, "fri":false, "sat":false]
     
