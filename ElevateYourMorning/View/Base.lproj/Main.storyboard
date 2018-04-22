@@ -126,6 +126,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" image="edit_button"/>
                                                     <connections>
+                                                        <action selector="edit_alarm_btn_pressed:" destination="5dT-Sw-1TX" eventType="touchUpInside" id="lVH-fj-BPf"/>
                                                         <segue destination="ezL-kD-hVV" kind="show" id="DB9-0X-bBG"/>
                                                     </connections>
                                                 </button>
@@ -488,6 +489,7 @@
         <image name="new_background" width="375" height="667"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="RFp-RC-zeN"/>
         <segue reference="RDZ-TA-UtC"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

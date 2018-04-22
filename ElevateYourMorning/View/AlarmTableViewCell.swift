@@ -51,16 +51,6 @@ class AlarmTableViewCell: UITableViewCell {
         }
     }
     
-    /*
-        Edit button
-    */
-    @IBAction func edit_btn_pressed(_ sender: Any) {
-        //change view
-        NSLog("edit pressed")
-        
-    }
-    
-    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

@@ -48,7 +48,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         let content = UNMutableNotificationContent()
         content.title = "Title"
         content.body = "Body"
-        content.sound = UNNotificationSound.default()
+        //content.sound = UNNotificationSound.default()
+        content.sound = UNNotificationSound(named:"NapalmDeath.mp3")
         
         //trigger the alarm
         for a in Alarms{
@@ -63,27 +64,29 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
             
             //play alarm
-            guard let url = Bundle.main.url(forResource:"GrinchScream", withExtension: "mp3") else{return}
-            
-            do{
-                try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
-                try AVAudioSession.sharedInstance().setActive(true)
-                
-                player = try AVAudioPlayer(contentsOf:url, fileTypeHint:AVFileType.mp3.rawValue)
-                
-                guard let player = player else {return}
-                player.play()
-            }
-            catch{
-                //catching errors
-                print(error.localizedDescription)
-            }
+            //playSound()
         }
         
         //watch
         NotificationCenter.default.addObserver(self, selector: #selector(watchRecieve), name: NSNotification.Name(rawValue: "reeivedWatchMessage"), object: nil)
         
         
+    }
+    
+    func playSound(){
+        guard let url = Bundle.main.url(forResource:"GrinchScream", withExtension:"mp3")else {return}
+        do{
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+            guard let player = player else{return}
+            //player.numberOfLoops = -1 //repeats the alarm
+            player.play()
+        }
+        catch let error{
+            print(error.localizedDescription)
+        }
     }
     
     @IBAction func on_off_btn_pressed(_ sender: UIButton) {
@@ -98,6 +101,11 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBAction func add_alarm_btn_pressed(_ sender: Any) {
         NSLog("add alarm button pressed")
+    }
+    
+    @IBAction func edit_alarm_btn_pressed(_ sender: Any) {
+        NSLog("edit alarm button pressed")
+        NSLog(String((sender as! UIButton).tag))
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if(Alarms.count == 0 ){
