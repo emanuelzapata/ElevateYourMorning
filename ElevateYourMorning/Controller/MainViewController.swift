@@ -127,7 +127,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.time_label.text = Alarms[indexPath.row].time_str
         //cell.alarm = Alarms[indexPath.row]
         //sendInfo(toEdit: Alarms[indexPath.row])
-        
+        //cell.increment_tag()
         //days of the week
         self.labelColors(alarm: Alarms[indexPath.row], cell: cell)
         

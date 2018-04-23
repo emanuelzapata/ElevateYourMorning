@@ -135,6 +135,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
+                                            <outlet property="edit_button" destination="LRy-xI-i82" id="hvK-HN-h9j"/>
                                             <outlet property="fri_label" destination="VLb-Yl-NgZ" id="D1i-sZ-hOT"/>
                                             <outlet property="mon_label" destination="wV4-Y1-XEQ" id="ygB-yk-LSk"/>
                                             <outlet property="sat_label" destination="A1R-EQ-zzg" id="lLy-au-Kqg"/>
