@@ -107,6 +107,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         NSLog("edit alarm button pressed")
         NSLog(String((sender as! UIButton).tag))
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if(Alarms.count == 0 ){
             let defaultAlarm = Alarm()
@@ -127,8 +128,11 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.time_label.text = Alarms[indexPath.row].time_str
         //cell.alarm = Alarms[indexPath.row]
         //sendInfo(toEdit: Alarms[indexPath.row])
-        //cell.increment_tag()
+       
         //days of the week
+        //this little line here sets the tag to the indexPath.row value :)
+        cell.edit_button.tag = indexPath.row
+        
         self.labelColors(alarm: Alarms[indexPath.row], cell: cell)
         
         return cell

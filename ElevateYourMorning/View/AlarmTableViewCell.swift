@@ -15,7 +15,7 @@ import UIKit
     -Add on/off button and set corresponding image (Alarms array on_off_btn)
  
  */
-var count = 1
+
 class AlarmTableViewCell: UITableViewCell {
     
     var alarm = Alarm()
@@ -35,11 +35,7 @@ class AlarmTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-    }
-    func increment_tag(){
-        edit_button.tag = edit_button.tag+0
-    }
-    
+    }    
     /*
         On/Off Button
     */
