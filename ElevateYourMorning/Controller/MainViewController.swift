@@ -46,9 +46,13 @@ func playSound(){
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var add_button: UIButton!
+    
 
     
     let session = WCSession.default
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,9 +64,10 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.delegate = self
         tableView.dataSource = self
         
+        
         /*
-            Notification Stuff
-        */
+         Notification Stuff
+         */
         
         //content
         let content = UNMutableNotificationContent()
@@ -73,20 +78,21 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         //trigger the alarm
         for a in Alarms{
-            var time = DateComponents()
-            time = self.formatDateComponent(alarm: a)
-            let trigger = UNCalendarNotificationTrigger(dateMatching: time, repeats: true)
-            
-            //request
-            let request = UNNotificationRequest(identifier: "testIdentifier", content: content, trigger: trigger)
-            
-            //send notification
-            UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
-            
-            //play alarm
-            //playSound()
+            if(a.on_off_btn == true){
+                var time = DateComponents()
+                time = self.formatDateComponent(alarm: a)
+                let trigger = UNCalendarNotificationTrigger(dateMatching: time, repeats: true)
+                
+                //request
+                let request = UNNotificationRequest(identifier: "testIdentifier", content: content, trigger: trigger)
+                
+                //send notification
+                UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+                
+                //play alarm
+                //playSound()
+            }
         }
-        
         
         
         //watch
@@ -95,15 +101,23 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
     
+    
+    
 
     @IBAction func on_off_btn_pressed(_ sender: UIButton) {
         //change image
+        
+        
         if((sender as AnyObject).currentImage == #imageLiteral(resourceName: "alarm_on")){
             sender.setImage(#imageLiteral(resourceName: "alarm_off"), for: .normal)
+            Alarms[sender.tag].on_off_btn = false;
+
         }
         else{
             sender.setImage(#imageLiteral(resourceName: "alarm_on"), for: .normal)
+            Alarms[sender.tag].on_off_btn = true;
         }
+        Alarms[sender.tag].display()
     }
     
     @IBAction func add_alarm_btn_pressed(_ sender: Any) {
@@ -154,9 +168,17 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         //days of the week
         //this little line here sets the tag to the indexPath.row value
         cell.edit_button.tag = indexPath.row
+        cell.on_button.tag = indexPath.row
+        if(Alarms[indexPath.row].on_off_btn == true){
+            cell.on_button.setImage(#imageLiteral(resourceName: "alarm_on"), for: .normal);
+        }
+        else{
+            cell.on_button.setImage(#imageLiteral(resourceName: "alarm_off"), for: .normal);
+        }
         
         self.labelColors(alarm: Alarms[indexPath.row], cell: cell)
         
+        Alarms[indexPath.row].display()
         return cell
     }
     

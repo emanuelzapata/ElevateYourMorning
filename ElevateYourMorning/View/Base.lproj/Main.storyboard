@@ -146,6 +146,7 @@
                                             <outlet property="edit_button" destination="LRy-xI-i82" id="hvK-HN-h9j"/>
                                             <outlet property="fri_label" destination="VLb-Yl-NgZ" id="D1i-sZ-hOT"/>
                                             <outlet property="mon_label" destination="wV4-Y1-XEQ" id="ygB-yk-LSk"/>
+                                            <outlet property="on_button" destination="9mH-3P-2Ls" id="rfo-fP-brq"/>
                                             <outlet property="sat_label" destination="A1R-EQ-zzg" id="lLy-au-Kqg"/>
                                             <outlet property="sun_label" destination="0WF-m5-GiL" id="r8o-XJ-cGq"/>
                                             <outlet property="thu_label" destination="Oiv-2Z-Rl8" id="xS3-kB-mkS"/>
@@ -457,6 +458,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="26"/>
                                 <state key="normal" title="save"/>
+                                <connections>
+                                    <action selector="save_btn_pressed:" destination="ezL-kD-hVV" eventType="touchUpInside" id="XGA-b6-lUg"/>
+                                    <segue destination="5dT-Sw-1TX" kind="show" id="DIe-cm-fYd"/>
+                                </connections>
                             </button>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="m8d-ZV-Tez">
                                 <rect key="frame" x="0.0" y="61" width="320" height="162"/>
@@ -473,8 +478,14 @@
                         <viewLayoutGuide key="safeArea" id="wq5-eA-r4Z"/>
                     </view>
                     <connections>
-                        <outlet property="sun_button" destination="Yie-CX-DJj" id="txN-ou-KsO"/>
+                        <outlet property="fri_button" destination="whs-JI-n7W" id="7K9-nd-Eel"/>
+                        <outlet property="mon_button" destination="UEU-6I-FgA" id="MuQ-lf-Rkj"/>
+                        <outlet property="sat_button" destination="Yie-CX-DJj" id="Ayc-ii-94B"/>
+                        <outlet property="sun_button" destination="YRt-UX-ZJ6" id="eHZ-Ow-As0"/>
+                        <outlet property="thu_button" destination="uk9-Sr-Tvf" id="Q4u-gS-5Pl"/>
                         <outlet property="timePicker" destination="m8d-ZV-Tez" id="E6B-Gw-eQi"/>
+                        <outlet property="tue_button" destination="WBl-tB-8Ql" id="cRR-Op-OyH"/>
+                        <outlet property="wed_button" destination="GVi-eq-Jxh" id="uvr-6n-TlT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Z4-m2-cdg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -491,6 +502,7 @@
         <image name="new_background" width="375" height="667"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="DB9-0X-bBG"/>
         <segue reference="gke-ze-Tv5"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

@@ -14,7 +14,17 @@ var t = -1
 class EditViewController: UIViewController {
 
     
+    @IBOutlet weak var sat_button: UIButton!
+    @IBOutlet weak var fri_button: UIButton!
+    @IBOutlet weak var thu_button: UIButton!
+    @IBOutlet weak var wed_button: UIButton!
+    @IBOutlet weak var tue_button: UIButton!
+    @IBOutlet weak var mon_button: UIButton!
     @IBOutlet weak var sun_button: UIButton!
+    
+    
+    
+    
     @IBOutlet weak var timePicker: UIDatePicker!
 
     override func viewDidLoad() {
@@ -23,11 +33,36 @@ class EditViewController: UIViewController {
         timePicker.setValue(UIColor.white, forKey: "textColor")
         
         if(Alarms[t].days_of_the_week["sat"] == true){
+            sat_button.setTitleColor(UIColor.red, for: .normal)
+        }
+        if(Alarms[t].days_of_the_week["sun"] == true){
             sun_button.setTitleColor(UIColor.red, for: .normal)
+        }
+        if(Alarms[t].days_of_the_week["mon"] == true){
+            mon_button.setTitleColor(UIColor.red, for: .normal)
+        }
+        if(Alarms[t].days_of_the_week["tue"] == true){
+            tue_button.setTitleColor(UIColor.red, for: .normal)
+        }
+        if(Alarms[t].days_of_the_week["wed"] == true){
+            wed_button.setTitleColor(UIColor.red, for: .normal)
+        }
+        if(Alarms[t].days_of_the_week["thu"] == true){
+            thu_button.setTitleColor(UIColor.red, for: .normal)
+        }
+        if(Alarms[t].days_of_the_week["fri"] == true){
+            fri_button.setTitleColor(UIColor.red, for: .normal)
         }
 
     }
 
+    @IBAction func save_btn_pressed(_ sender: Any) {
+        Alarms[t].time = timePicker.date
+        Alarms[t].parse_date()
+        counter+=1;
+        Alarms[t].id = counter;
+        Alarms[t].display()
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -49,47 +84,50 @@ class EditViewController: UIViewController {
         
     }
     
+    
+    
+    
     @IBAction func mon_btn_pressed(_ sender: UIButton) {
         if(sender.currentTitleColor != UIColor.red){
             sender.setTitleColor(UIColor.red, for: .normal)
-            //new_alarm.days_of_the_week["mon"] = true
+            Alarms[t].days_of_the_week["mon"] = true
         }
         else{
             sender.setTitleColor(UIColor.darkGray, for: .normal)
-            //new_alarm.days_of_the_week["mon"] = false
+            Alarms[t].days_of_the_week["mon"] = false
         }
     }
     
     @IBAction func tue_btn_pressed(_ sender: UIButton) {
         if(sender.currentTitleColor != UIColor.red){
             sender.setTitleColor(UIColor.red, for: .normal)
-            //new_alarm.days_of_the_week["tue"] = true
+            Alarms[t].days_of_the_week["tue"] = true
         }
         else{
             sender.setTitleColor(UIColor.darkGray, for: .normal)
-            //new_alarm.days_of_the_week["tue"] = false
+            Alarms[t].days_of_the_week["tue"] = false
         }
     }
     
     @IBAction func wed_btn_pressed(_ sender: UIButton) {
         if(sender.currentTitleColor != UIColor.red){
             sender.setTitleColor(UIColor.red, for: .normal)
-            //new_alarm.days_of_the_week["wed"] = true
+            Alarms[t].days_of_the_week["wed"] = true
         }
         else{
             sender.setTitleColor(UIColor.darkGray, for: .normal)
-            //new_alarm.days_of_the_week["wed"] = false
+            Alarms[t].days_of_the_week["wed"] = false
         }
     }
     
     @IBAction func thu_btn_pressed(_ sender: UIButton) {
         if(sender.currentTitleColor != UIColor.red){
             sender.setTitleColor(UIColor.red, for: .normal)
-            //new_alarm.days_of_the_week["thu"] = true
+            Alarms[t].days_of_the_week["thu"] = true
         }
         else{
             sender.setTitleColor(UIColor.darkGray, for: .normal)
-            //new_alarm.days_of_the_week["thu"] = false
+            Alarms[t].days_of_the_week["thu"] = false
         }
     }
     
