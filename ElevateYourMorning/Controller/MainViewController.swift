@@ -27,6 +27,7 @@ var player: AVAudioPlayer?
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var add_button: UIButton!
+
     
     let session = WCSession.default
     
@@ -122,6 +123,18 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
+    //function here to delete on a swipe function
+    //this delete works but not on the original prototype lmao
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath)->[UITableViewRowAction]?{
+        let delete = UITableViewRowAction(style: .destructive, title: "Delete"){
+            (action, indexPath) in
+            Alarms.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+        return [delete]
+    }
+    
+   
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "alarm_cell") as! AlarmTableViewCell
         cell.layer.cornerRadius = 45;
