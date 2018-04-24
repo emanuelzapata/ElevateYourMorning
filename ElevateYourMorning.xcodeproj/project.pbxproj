@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2850E204208D520E005027E1 /* GrinchScream.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2850E202208D520E005027E1 /* GrinchScream.mp3 */; };
-		2850E205208D520F005027E1 /* NapalmDeath.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2850E203208D520E005027E1 /* NapalmDeath.mp3 */; };
+		2850E208208FCBC3005027E1 /* GrinchScream.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2850E206208FCBC3005027E1 /* GrinchScream.mp3 */; };
+		2850E209208FCBC3005027E1 /* NapalmDeath.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2850E207208FCBC3005027E1 /* NapalmDeath.mp3 */; };
 		F11B779C20740ACF00DC8089 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11B779B20740ACF00DC8089 /* AppDelegate.swift */; };
 		F11B779E20740ACF00DC8089 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11B779D20740ACF00DC8089 /* MainViewController.swift */; };
 		F11B77A120740ACF00DC8089 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F11B779F20740ACF00DC8089 /* Main.storyboard */; };
@@ -82,8 +82,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2850E202208D520E005027E1 /* GrinchScream.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = GrinchScream.mp3; path = "../../../../Dropbox/Senior Project/AlarmSounds/Final/GrinchScream.mp3"; sourceTree = "<group>"; };
-		2850E203208D520E005027E1 /* NapalmDeath.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = NapalmDeath.mp3; path = "../../../../Dropbox/Senior Project/AlarmSounds/Final/NapalmDeath.mp3"; sourceTree = "<group>"; };
+		2850E206208FCBC3005027E1 /* GrinchScream.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = GrinchScream.mp3; sourceTree = "<group>"; };
+		2850E207208FCBC3005027E1 /* NapalmDeath.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = NapalmDeath.mp3; sourceTree = "<group>"; };
 		F11B779820740ACF00DC8089 /* ElevateYourMorning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElevateYourMorning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F11B779B20740ACF00DC8089 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F11B779D20740ACF00DC8089 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -146,8 +146,8 @@
 		2850E201208D51F3005027E1 /* AudioFiles */ = {
 			isa = PBXGroup;
 			children = (
-				2850E202208D520E005027E1 /* GrinchScream.mp3 */,
-				2850E203208D520E005027E1 /* NapalmDeath.mp3 */,
+				2850E206208FCBC3005027E1 /* GrinchScream.mp3 */,
+				2850E207208FCBC3005027E1 /* NapalmDeath.mp3 */,
 			);
 			path = AudioFiles;
 			sourceTree = "<group>";
@@ -400,10 +400,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2850E204208D520E005027E1 /* GrinchScream.mp3 in Resources */,
+				2850E208208FCBC3005027E1 /* GrinchScream.mp3 in Resources */,
 				F11B77A620740ACF00DC8089 /* LaunchScreen.storyboard in Resources */,
 				F11B77A320740ACF00DC8089 /* Assets.xcassets in Resources */,
-				2850E205208D520F005027E1 /* NapalmDeath.mp3 in Resources */,
+				2850E209208FCBC3005027E1 /* NapalmDeath.mp3 in Resources */,
 				F11B77A120740ACF00DC8089 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
