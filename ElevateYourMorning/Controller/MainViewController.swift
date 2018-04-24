@@ -23,6 +23,7 @@ var Alarms = [Alarm]()
 var counter = 0;
 var editAlarm: Alarm!
 var player: AVAudioPlayer?
+var ringtones: [String] = ["GrinchScream", "NapalmDeath"]
 
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
@@ -49,8 +50,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         let content = UNMutableNotificationContent()
         content.title = "Title"
         content.body = "Body"
-        //content.sound = UNNotificationSound.default()
-        content.sound = UNNotificationSound(named:"NapalmDeath.mp3")
+        content.sound = UNNotificationSound.default()
+        //content.sound = UNNotificationSound(named:"NapalmDeath.mp3")
         
         //trigger the alarm
         for a in Alarms{
@@ -75,7 +76,9 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func playSound(){
-        guard let url = Bundle.main.url(forResource:"GrinchScream", withExtension:"mp3")else {return}
+        var n:Int = Int(arc4random_uniform(UInt32(ringtones.count)))
+       
+        guard let url = Bundle.main.url(forResource:ringtones[n], withExtension:"mp3")else {return}
         do{
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
             try AVAudioSession.sharedInstance().setActive(true)
@@ -133,17 +136,17 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         return [delete]
     }
-    
-   
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "alarm_cell") as! AlarmTableViewCell
         cell.layer.cornerRadius = 45;
         cell.time_label.text = Alarms[indexPath.row].time_str
+        //cell.id = IDGenerator()
         //cell.alarm = Alarms[indexPath.row]
         //sendInfo(toEdit: Alarms[indexPath.row])
        
         //days of the week
-        //this little line here sets the tag to the indexPath.row value :)
+        //this little line here sets the tag to the indexPath.row value
         cell.edit_button.tag = indexPath.row
         
         self.labelColors(alarm: Alarms[indexPath.row], cell: cell)

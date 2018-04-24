@@ -15,12 +15,15 @@ import UIKit
     -Add on/off button and set corresponding image (Alarms array on_off_btn)
  
  */
+func IDGenerator()->Int{
+    return Int(arc4random_uniform(1000))
+}
 
 class AlarmTableViewCell: UITableViewCell {
     
-    var alarm = Alarm()
+    var id: Int = 0
     
-    //to be used as a tag thingy
+    //to be used as a tag thingy, maybe
     @IBOutlet weak var edit_button: UIButton!
     @IBOutlet weak var time_label: UILabel!
     @IBOutlet weak var sun_label: UILabel!
@@ -31,11 +34,11 @@ class AlarmTableViewCell: UITableViewCell {
     @IBOutlet weak var fri_label: UILabel!
     @IBOutlet weak var sat_label: UILabel!
     
-   
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-    }    
+    }
     /*
         On/Off Button
     */
