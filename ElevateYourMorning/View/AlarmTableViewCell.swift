@@ -30,7 +30,8 @@ class AlarmTableViewCell: UITableViewCell {
     @IBOutlet weak var fri_label: UILabel!
     @IBOutlet weak var sat_label: UILabel!
     
-
+    @IBOutlet weak var on_button: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

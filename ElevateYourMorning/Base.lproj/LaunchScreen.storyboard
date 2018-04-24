@@ -23,6 +23,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="new_background" translatesAutoresizingMaskIntoConstraints="NO" id="ViA-rk-c1R">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elevate Your Morning" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="OZ3-7v-lVX">
                                 <rect key="frame" x="24" y="453" width="328" height="74"/>
                                 <constraints>
@@ -61,5 +65,6 @@
     </scenes>
     <resources>
         <image name="logo" width="640" height="640"/>
+        <image name="new_background" width="375" height="667"/>
     </resources>
 </document>
