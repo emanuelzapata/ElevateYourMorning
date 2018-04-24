@@ -9,6 +9,7 @@
 import UIKit
 
 //edit or delete selected alarm
+var t = -1
 
 class EditViewController: UIViewController {
 
@@ -17,7 +18,7 @@ class EditViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        timePicker.date = Alarms[t].time
 
     }
 
@@ -28,9 +29,6 @@ class EditViewController: UIViewController {
     }
 
     
-    @IBAction func delete_btn_pressed(_ sender: Any) {
-  
-    }
     
     @IBAction func sun_btn_pressed(_ sender: UIButton) {
         if(sender.currentTitleColor != UIColor.red){

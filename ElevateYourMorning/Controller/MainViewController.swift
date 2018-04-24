@@ -25,6 +25,24 @@ var editAlarm: Alarm!
 var player: AVAudioPlayer?
 var ringtones: [String] = ["GrinchScream", "NapalmDeath"]
 
+func playSound(){
+    var n:Int = Int(arc4random_uniform(UInt32(ringtones.count)))
+    
+    guard let url = Bundle.main.url(forResource:ringtones[n], withExtension:"mp3")else {return}
+    do{
+        try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+        try AVAudioSession.sharedInstance().setActive(true)
+        
+        player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+        guard let player = player else{return}
+        player.numberOfLoops = -1 //repeats the alarm
+        player.play()
+    }
+    catch let error{
+        print(error.localizedDescription)
+    }
+}
+
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var add_button: UIButton!
@@ -75,24 +93,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
     
-    func playSound(){
-        var n:Int = Int(arc4random_uniform(UInt32(ringtones.count)))
-       
-        guard let url = Bundle.main.url(forResource:ringtones[n], withExtension:"mp3")else {return}
-        do{
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
-            try AVAudioSession.sharedInstance().setActive(true)
-            
-            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
-            guard let player = player else{return}
-            //player.numberOfLoops = -1 //repeats the alarm
-            player.play()
-        }
-        catch let error{
-            print(error.localizedDescription)
-        }
-    }
-    
+
     @IBAction func on_off_btn_pressed(_ sender: UIButton) {
         //change image
         if((sender as AnyObject).currentImage == #imageLiteral(resourceName: "alarm_on")){
@@ -109,7 +110,10 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBAction func edit_alarm_btn_pressed(_ sender: Any) {
         NSLog("edit alarm button pressed")
-        NSLog(String((sender as! UIButton).tag))
+        //NSLog(String((sender as! UIButton).tag))
+       // Alarms[Int((sender as! UIButton).tag)].display()
+        t = Int((sender as! UIButton).tag)
+        NSLog(String(t))
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

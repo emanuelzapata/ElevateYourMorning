@@ -15,13 +15,9 @@ import UIKit
     -Add on/off button and set corresponding image (Alarms array on_off_btn)
  
  */
-func IDGenerator()->Int{
-    return Int(arc4random_uniform(1000))
-}
+
 
 class AlarmTableViewCell: UITableViewCell {
-    
-    var id: Int = 0
     
     //to be used as a tag thingy, maybe
     @IBOutlet weak var edit_button: UIButton!
