@@ -68,8 +68,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         let content = UNMutableNotificationContent()
         content.title = "Title"
         content.body = "Body"
-        content.sound = UNNotificationSound.default()
-        //content.sound = UNNotificationSound(named:"NapalmDeath.mp3")
+        //content.sound = UNNotificationSound.default()
+        content.sound = UNNotificationSound(named:"NapalmDeath.mp3")
         
         //trigger the alarm
         for a in Alarms{
@@ -86,6 +86,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             //play alarm
             //playSound()
         }
+        
+        
         
         //watch
         NotificationCenter.default.addObserver(self, selector: #selector(watchRecieve), name: NSNotification.Name(rawValue: "reeivedWatchMessage"), object: nil)
