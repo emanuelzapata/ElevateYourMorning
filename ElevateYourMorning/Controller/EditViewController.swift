@@ -19,6 +19,7 @@ class EditViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         timePicker.date = Alarms[t].time
+        timePicker.setValue(UIColor.white, forKey: "textColor")
 
     }
 

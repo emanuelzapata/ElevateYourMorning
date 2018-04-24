@@ -24,6 +24,8 @@ class AddAlarmViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        timePicker.setValue(UIColor.white, forKey: "textColor")
+        
         // Do any additional setup after loading the view.
         
         NotificationCenter.default.addObserver(self, selector: #selector(watchReceieve), name: NSNotification.Name(rawValue: "receivedWatchMessage"), object: nil)

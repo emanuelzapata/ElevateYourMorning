@@ -87,6 +87,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             //playSound()
         }
         
+        
+        
         //watch
         NotificationCenter.default.addObserver(self, selector: #selector(watchRecieve), name: NSNotification.Name(rawValue: "reeivedWatchMessage"), object: nil)
         
