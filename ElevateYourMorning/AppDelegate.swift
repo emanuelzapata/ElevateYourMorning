@@ -83,7 +83,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         if response.notification.request.identifier == "testIdentifier"{
             print("handling notification with the identifier 'testIdentifier'")
         }
-        playSound()
+        //playSound()
         let alert = UIAlertController(title: "title", message: "message", preferredStyle: .alert)
         let action1 = UIAlertAction(title: "Action", style: .default) { (action) in
             print("action 1")
