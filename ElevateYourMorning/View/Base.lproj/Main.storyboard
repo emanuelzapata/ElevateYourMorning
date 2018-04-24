@@ -473,6 +473,7 @@
                         <viewLayoutGuide key="safeArea" id="wq5-eA-r4Z"/>
                     </view>
                     <connections>
+                        <outlet property="sun_button" destination="Yie-CX-DJj" id="txN-ou-KsO"/>
                         <outlet property="timePicker" destination="m8d-ZV-Tez" id="E6B-Gw-eQi"/>
                     </connections>
                 </viewController>
@@ -490,7 +491,7 @@
         <image name="new_background" width="375" height="667"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="A9K-ML-vyy"/>
+        <segue reference="gke-ze-Tv5"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

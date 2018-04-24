@@ -14,12 +14,17 @@ var t = -1
 class EditViewController: UIViewController {
 
     
+    @IBOutlet weak var sun_button: UIButton!
     @IBOutlet weak var timePicker: UIDatePicker!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         timePicker.date = Alarms[t].time
         timePicker.setValue(UIColor.white, forKey: "textColor")
+        
+        if(Alarms[t].days_of_the_week["sat"] == true){
+            sun_button.setTitleColor(UIColor.red, for: .normal)
+        }
 
     }
 
