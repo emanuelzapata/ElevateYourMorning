@@ -77,13 +77,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         //do stuff
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "receivedWatchMessage"), object: self, userInfo: message)
+        
+        stopSound()
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         if response.notification.request.identifier == "testIdentifier"{
             print("handling notification with the identifier 'testIdentifier'")
         }
-        //playSound()
+        playSound()
+        
+        
         let alert = UIAlertController(title: "title", message: "message", preferredStyle: .alert)
         let action1 = UIAlertAction(title: "Action", style: .default) { (action) in
             print("action 1")
@@ -95,6 +99,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         completionHandler([.alert, .sound])
+        
     }
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

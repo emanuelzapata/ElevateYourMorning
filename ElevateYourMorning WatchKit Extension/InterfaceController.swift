@@ -32,7 +32,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate, HKWorkoutSe
     }
     
     @IBAction func startTapped() {
-        self.session.sendMessage(["msg" : "it works!"], replyHandler: nil, errorHandler: nil)
+        self.session.sendMessage(["msg" : "150"], replyHandler: nil, errorHandler: nil)
         
         //start workout session
         //workout configuration
