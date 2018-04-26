@@ -27,6 +27,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="51i-g9-Rt9">
+                                <rect key="frame" x="66" y="211" width="242" height="245"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="245" id="mwE-Nm-5Q7"/>
+                                    <constraint firstAttribute="width" constant="242" id="xbU-8d-OKd"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elevate Your Morning" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="OZ3-7v-lVX">
                                 <rect key="frame" x="24" y="453" width="328" height="74"/>
                                 <constraints>
@@ -36,13 +43,6 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="51i-g9-Rt9">
-                                <rect key="frame" x="66" y="211" width="242" height="245"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="245" id="mwE-Nm-5Q7"/>
-                                    <constraint firstAttribute="width" constant="242" id="xbU-8d-OKd"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>

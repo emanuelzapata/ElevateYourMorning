@@ -66,28 +66,18 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
-      allowLocationSimulation = "YES">
-      <RemoteRunnable
-         runnableDebuggingMode = "2"
-         BundleIdentifier = "com.apple.Carousel"
-         RemotePath = "/ElevateYourMorning WatchKit App">
+      allowLocationSimulation = "YES"
+      notificationPayloadFile = "ElevateYourMorning WatchKit Extension/PushNotificationPayload.apns">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F11B77B420740AD000DC8089"
-            BuildableName = "ElevateYourMorning WatchKit App.app"
-            BlueprintName = "ElevateYourMorning WatchKit App"
+            BlueprintIdentifier = "F11B779720740ACF00DC8089"
+            BuildableName = "ElevateYourMorning.app"
+            BlueprintName = "ElevateYourMorning"
             ReferencedContainer = "container:ElevateYourMorning.xcodeproj">
          </BuildableReference>
-      </RemoteRunnable>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F11B77B420740AD000DC8089"
-            BuildableName = "ElevateYourMorning WatchKit App.app"
-            BlueprintName = "ElevateYourMorning WatchKit App"
-            ReferencedContainer = "container:ElevateYourMorning.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

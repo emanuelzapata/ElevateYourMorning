@@ -25,6 +25,10 @@ var editAlarm: Alarm!
 var player: AVAudioPlayer?
 var ringtones: [String] = ["GrinchScream", "NapalmDeath"]
 
+var user_hr = 0
+
+
+
 func playSound(){
     var n:Int = Int(arc4random_uniform(UInt32(ringtones.count)))
     
@@ -37,10 +41,21 @@ func playSound(){
         guard let player = player else{return}
         player.numberOfLoops = -1 //repeats the alarm
         player.play()
+        
+        /*if(user_hr >= 150){
+            player.stop()
+        }*/
     }
     catch let error{
         print(error.localizedDescription)
     }
+}
+
+func stopSound(){
+    if(user_hr >= 150){
+        player?.stop()
+    }
+
 }
 
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -81,29 +96,41 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             if(a.on_off_btn == true){
                 var time = DateComponents()
                 time = self.formatDateComponent(alarm: a)
-                let trigger = UNCalendarNotificationTrigger(dateMatching: time, repeats: true)
+                let trigger = UNCalendarNotificationTrigger(dateMatching: time, repeats: false)
                 
                 //request
                 let request = UNNotificationRequest(identifier: "testIdentifier", content: content, trigger: trigger)
                 
                 //send notification
                 UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+            
                 
                 //play alarm
                 //playSound()
+                
             }
         }
         
         
         //watch
-        NotificationCenter.default.addObserver(self, selector: #selector(watchRecieve), name: NSNotification.Name(rawValue: "reeivedWatchMessage"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(watchReceieve), name: NSNotification.Name(rawValue: "receivedWatchMessage"), object: nil)
         
         
     }
     
     
     
-
+    @objc func watchReceieve(info: NSNotification){
+        let message = info.userInfo!
+        DispatchQueue.main.async {
+            print(message["msg"] as! String)
+            let time = message["msg"] as! String
+            user_hr = Int(time)!
+            print("user_hr: \(user_hr)")
+        }
+        
+    }
+    
     @IBAction func on_off_btn_pressed(_ sender: UIButton) {
         //change image
         
